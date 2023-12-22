@@ -1,0 +1,16 @@
+---
+layout: layouts/home.njk
+pagination:
+    data: posts
+    size: 300
+    alias: posts
+---
+
+{% for post in posts %}
+    <a href="/posts/{{ post.attributes.title }}/" >
+        <h3 >{{ post.attributes.title}}</h3>
+    </a>
+    {{ post }}
+{% endfor %}
+
+
